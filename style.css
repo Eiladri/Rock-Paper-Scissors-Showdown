@@ -1,0 +1,1407 @@
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px 15px;
+
+    background-image:
+        linear-gradient(rgba(5, 27, 43, 0.15),
+            rgba(5, 27, 43, 0.15)),
+        url("assets/globalBg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    font-family: 'Fredoka', sans-serif;
+}
+
+
+/* =========================================
+   MAIN GAME CONTAINER
+========================================= */
+
+.gameContainer {
+
+    width: min(100%, 1000px);
+    min-height: 650px;
+
+    padding: 25px 35px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    background: rgba(22, 65, 91, 0.62);
+
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.65),
+        0 8px 20px rgba(0, 0, 0, 0.4),
+        inset 0 0 15px rgba(255, 255, 255, 0.08);
+
+}
+
+
+/* =========================================
+   HEADER SECTION
+========================================= */
+
+.headerSection {
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 3px;
+
+}
+
+.titleSection {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+}
+
+.titleSection h1 {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    font-family: 'Luckiest Guy', cursive;
+
+    font-size: clamp(2rem, 5vw, 3.5rem);
+
+    letter-spacing: 1px;
+
+    -webkit-text-stroke: 1.5px black;
+
+    text-shadow:
+        -2px -2px 0 #111,
+        2px -2px 0 #111,
+        -2px 2px 0 #111,
+        2px 2px 0 #111,
+        0 6px 10px rgba(0, 0, 0, 0.45);
+
+}
+
+.title1 {
+    color: #E29165;
+}
+
+.title2 {
+    color: #F6D25F;
+}
+
+.title3 {
+    color: #4ED8D8;
+}
+
+
+/* Subtitle */
+
+.subtitle {
+
+    font-family: 'Bangers', sans-serif;
+
+    color: #FFA66F;
+
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.5);
+
+}
+
+.tagline {
+
+    font-family: 'Luckiest Guy', cursive;
+
+    color: #F6D25F;
+
+    font-size: 1.3rem;
+
+    -webkit-text-stroke: 0.5px black;
+
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.5);
+
+}
+
+
+/* =========================================
+   GAME SECTION
+========================================= */
+
+.gameSection {
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: clamp(20px, 5vw, 60px);
+
+    margin: 15px 0;
+
+}
+
+
+/* =========================================
+   PLAYER CARDS
+========================================= */
+
+.playerCard {
+
+    width: 170px;
+    height: 250px;
+
+    padding: 18px 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(26, 47, 76, 0.95);
+
+    border-radius: 13px;
+
+    box-shadow:
+        0 7px 15px rgba(0, 0, 0, 0.35),
+        inset 0 0 10px rgba(255, 255, 255, 0.05);
+
+    transition: transform 0.25s ease;
+
+}
+
+.playerCard:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Player card border colours */
+
+.player1 {
+    border: 4px solid #E29165;
+}
+
+.player2 {
+    border: 4px solid #4ED8D8;
+}
+
+
+/* Card headings */
+
+.cardLabel,
+.cardName {
+
+    font-family: 'Bangers', sans-serif;
+
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+
+}
+
+.player1 p {
+    color: #E29165;
+}
+
+.player2 p {
+    color: #4ED8D8;
+}
+
+
+/* Question mark area */
+
+.card-icon {
+
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    border: 3px dashed rgba(255, 255, 255, 0.7);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    font-family: 'Luckiest Guy', cursive;
+
+    font-size: 3.5rem;
+
+    background: rgba(255, 255, 255, 0.03);
+
+    transition: transform 0.3s ease;
+
+}
+
+.card-icon:hover {
+    transform: scale(1.08);
+}
+
+
+/* =========================================
+   VS SECTION
+========================================= */
+
+.vs {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+}
+
+
+/* Comic book explosion */
+
+.vsBadge {
+
+    position: relative;
+
+    width: 145px;
+    height: 115px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    isolation: isolate;
+
+    filter: drop-shadow(3px 5px 2px rgba(0, 0, 0, 0.5));
+
+}
+
+.vsBadge::before,
+.vsBadge::after {
+
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    clip-path: polygon(50% 0%,
+            62% 15%,
+            78% 3%,
+            78% 21%,
+            98% 19%,
+            88% 39%,
+            100% 52%,
+            88% 65%,
+            96% 83%,
+            76% 80%,
+            68% 100%,
+            53% 87%,
+            40% 100%,
+            30% 84%,
+            12% 94%,
+            17% 72%,
+            0% 63%,
+            12% 49%,
+            1% 34%,
+            21% 29%,
+            21% 10%,
+            40% 19%);
+
+}
+
+.vsBadge::before {
+
+    background: #101820;
+
+    z-index: -2;
+
+    transform: scale(1.08);
+
+}
+
+.vsBadge::after {
+
+    background: #F4F2E6;
+
+    z-index: -1;
+
+    transform: scale(0.94);
+
+}
+
+
+/* VS text */
+
+.vsBadge span {
+
+    font-family: 'Luckiest Guy', cursive;
+
+    font-size: 3.6rem;
+
+    color: #F16E50;
+
+    -webkit-text-stroke: 2px black;
+
+    text-shadow: 2px 3px 0 black;
+
+    transform: rotate(-5deg);
+
+}
+
+
+/* Let's play text */
+
+.playPrompt {
+
+    font-family: 'Bangers', sans-serif;
+
+    font-size: 1.2rem;
+
+    color: #F6D25F;
+
+    padding: 5px 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    border-radius: 7px;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    text-shadow: 1px 2px 2px black;
+
+    transform: rotate(-3deg);
+
+}
+
+
+/* =========================================
+   MOVE SELECTION SECTION
+========================================= */
+
+.moveSection {
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+.sectionHeading {
+
+    font-family: 'Bangers', sans-serif;
+
+    color: #F6D25F;
+
+    font-size: 1.5rem;
+
+    letter-spacing: 2px;
+
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.5);
+
+}
+
+
+/* Move buttons container */
+
+.moveOptions {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 22px;
+
+}
+
+
+/* Individual move buttons */
+
+.moveButton {
+
+    width: 112px;
+    height: 112px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2px;
+
+    border-radius: 50%;
+
+    background: rgba(23, 43, 64, 0.95);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+
+}
+
+
+/* Rock */
+
+#rockButton {
+
+    border: 5px solid #E29165;
+
+    box-shadow:
+        0 6px 0 #A85534,
+        0 10px 15px rgba(0, 0, 0, 0.35);
+
+}
+
+
+/* Paper */
+
+#paperButton {
+
+    border: 5px solid #F6D25F;
+
+    box-shadow:
+        0 6px 0 #B89B35,
+        0 10px 15px rgba(0, 0, 0, 0.35);
+
+}
+
+
+/* Scissors */
+
+#scissorsButton {
+
+    border: 5px solid #4ED8D8;
+
+    box-shadow:
+        0 6px 0 #249A9A,
+        0 10px 15px rgba(0, 0, 0, 0.35);
+
+}
+
+
+/* Hand emoji */
+
+.moveIcon {
+
+    font-size: 3rem;
+
+    line-height: 1.1;
+
+}
+
+
+/* Button labels */
+
+.moveLabel {
+
+    font-family: 'Bangers', sans-serif;
+
+    letter-spacing: 1px;
+
+}
+
+.rockButton .moveLabel {
+    color: #E29165;
+}
+
+.paperButton .moveLabel {
+    color: #F6D25F;
+}
+
+.scissorsButton .moveLabel {
+    color: #4ED8D8;
+}
+
+#scissor {
+    font-size: 0.8rem;
+}
+
+/* Hover effects */
+
+.moveButton:hover {
+
+    transform: translateY(-7px) scale(1.06);
+
+}
+
+.rockButton:hover {
+
+    background: rgba(226, 145, 101, 0.18);
+
+    box-shadow:
+        0 9px 0 #A85534,
+        0 15px 20px rgba(0, 0, 0, 0.4);
+
+}
+
+.paperButton:hover {
+
+    background: rgba(246, 210, 95, 0.18);
+
+    box-shadow:
+        0 9px 0 #B89B35,
+        0 15px 20px rgba(0, 0, 0, 0.4);
+
+}
+
+.scissorsButton:hover {
+
+    background: rgba(78, 216, 216, 0.18);
+
+    box-shadow:
+        0 9px 0 #249A9A,
+        0 15px 20px rgba(0, 0, 0, 0.4);
+
+}
+
+
+/* Click effect */
+
+.moveButton:active {
+
+    transform: translateY(3px) scale(0.96);
+
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
+
+}
+
+.moveButton:focus-visible {
+
+    outline: 3px solid white;
+    outline-offset: 5px;
+
+}
+
+
+/* =========================================
+   FOOTER / SCOREBOARD
+========================================= */
+
+.gameFooter {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 5px;
+
+}
+
+
+/* Score pill */
+
+.scoreBoard {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 7px 20px;
+
+    border-radius: 25px;
+
+    background: rgba(17, 35, 51, 0.88);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+    color: white;
+
+    font-family: 'Fredoka', sans-serif;
+
+}
+
+.scoreLabel {
+
+    font-weight: 600;
+
+    font-size: 0.9rem;
+
+    color: #F6D25F;
+
+    letter-spacing: 1px;
+
+}
+
+.playerScore,
+.cpuScore {
+
+    font-family: 'Luckiest Guy', cursive;
+
+    font-size: 1.25rem;
+
+    color: white;
+
+}
+
+.scoreDivider {
+
+    color: #E29165;
+
+    font-weight: bold;
+
+}
+
+
+/* Game status message */
+
+.gameMessage {
+
+    color: white;
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-size: 1rem;
+
+    text-align: center;
+
+    text-shadow: 2px 2px 4px black;
+
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 700px) {
+
+    .gameContainer {
+
+        padding: 22px 15px;
+
+        min-height: 620px;
+
+    }
+
+    .gameSection {
+
+        gap: 15px;
+
+    }
+
+    .playerCard {
+
+        width: 140px;
+        height: 215px;
+
+        padding: 15px 8px;
+
+    }
+
+    .cardLabel,
+    .cardName {
+
+        font-size: 1.2rem;
+
+    }
+
+    .card-icon {
+
+        width: 75px;
+        height: 75px;
+
+        font-size: 3rem;
+
+    }
+
+    .vsBadge {
+
+        width: 105px;
+        height: 85px;
+
+    }
+
+    .vsBadge span {
+
+        font-size: 2.8rem;
+
+    }
+
+    .moveButton {
+
+        width: 95px;
+        height: 95px;
+
+    }
+
+    .moveIcon {
+        font-size: 2.5rem;
+    }
+
+    .moveLabel {
+        font-size: 1rem;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 12px 8px;
+    }
+
+    .gameContainer {
+
+        min-height: 600px;
+
+        padding: 20px 10px;
+
+        gap: 15px;
+
+    }
+
+    .titleSection h1 {
+
+        gap: 5px;
+
+        font-size: clamp(1.6rem, 7vw, 2.3rem);
+
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .tagline {
+        font-size: 1.1rem;
+    }
+
+    .gameSection {
+
+        gap: 8px;
+
+    }
+
+    .playerCard {
+
+        width: 112px;
+        height: 185px;
+
+        padding: 12px 5px;
+
+    }
+
+    .cardLabel,
+    .cardName {
+
+        font-size: 1rem;
+
+    }
+
+    .card-icon {
+
+        width: 65px;
+        height: 65px;
+
+        font-size: 2.5rem;
+
+    }
+
+    .vsBadge {
+
+        width: 75px;
+        height: 65px;
+
+    }
+
+    .vsBadge span {
+
+        font-size: 2rem;
+
+    }
+
+    .playPrompt {
+        font-size: 0.85rem;
+        padding: 4px 7px;
+    }
+
+    .moveOptions {
+
+        gap: 12px;
+
+    }
+
+    .moveButton {
+
+        width: 83px;
+        height: 83px;
+
+        border-width: 4px;
+
+    }
+
+    .moveIcon {
+        font-size: 2.1rem;
+    }
+
+    .moveLabel {
+        font-size: 0.85rem;
+    }
+
+    .sectionHeading {
+        font-size: 1.2rem;
+    }
+
+}
+
+/* =========================================
+   GAME START / STOP BUTTON
+========================================= */
+
+.playButton {
+
+    margin-top: 20px;
+    padding: 10px 20px;
+
+    background: linear-gradient(135deg,
+            #F6D25F,
+            #E29165);
+
+    border: 3px solid #111;
+    border-radius: 10px;
+
+    font-family: 'Bangers', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+
+    color: #172C40;
+
+    box-shadow:
+        0 4px 0 #111,
+        0 6px 12px rgba(0, 0, 0, 0.35);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+/* Hover */
+
+.playButton:hover {
+
+    background: linear-gradient(45deg,
+            #FFED28,
+            #FF8B42);
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 0 #111,
+        0 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Click */
+
+.playButton:active {
+
+    transform: translateY(2px);
+
+    box-shadow:
+        0 2px 0 #111,
+        0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Keyboard accessibility */
+
+.playButton:focus-visible {
+
+    outline: 3px solid white;
+    outline-offset: 4px;
+
+}
+
+/* Default question mark */
+.cardPlaceholder {
+    color: white;
+    font-size: 3.5rem;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+/* Selected emoji */
+.choiceEmoji {
+    font-size: 3.5rem;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hide inactive elements */
+[hidden] {
+    display: none !important;
+}
+
+/* Game stats */
+
+.sessionStats {
+    width: 100%;
+    max-width: 650px;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 18px;
+    margin-top: 12px;
+}
+
+.statCard {
+    flex: 1;
+    min-width: 0;
+    min-height: 115px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+    padding: 15px 20px;
+
+    background: rgba(17, 43, 65, 0.92);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 6px 12px rgba(0, 0, 0, 0.35),
+        inset 0 0 12px rgba(255, 255, 255, 0.04);
+}
+
+.roundNo {
+    border: 4px solid #E29165;
+    box-shadow:
+        0 5px 12px rgba(226, 145, 101, 0.2),
+        inset 0 0 12px rgba(255, 255, 255, 0.04);
+}
+
+.highestScore {
+    border: 4px solid #4ED8D8;
+    box-shadow:
+        0 5px 12px rgba(78, 216, 216, 0.2),
+        inset 0 0 12px rgba(255, 255, 255, 0.04);
+}
+
+.statIcon {
+    font-size: 3.2rem;
+    line-height: 1;
+}
+
+.statInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.statLabel {
+    font-family: 'Bangers', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    color: #F6D25F;
+    white-space: nowrap;
+}
+
+.statValue {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2.5rem;
+    color: white;
+
+    -webkit-text-stroke: 1px black;
+
+    text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 480px) {
+    .sessionStats {
+        gap: 8px;
+    }
+
+    .statCard {
+        gap: 6px;
+        padding: 12px 6px;
+        min-height: 90px;
+        border-radius: 18px;
+        border-width: 3px;
+    }
+
+    .statIcon {
+        font-size: 1.8rem;
+    }
+
+    .statLabel {
+        font-size: 0.9rem;
+    }
+
+    .statValue {
+        font-size: 1.8rem;
+    }
+}
+
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100svh;
+    height: auto;
+    padding: clamp(8px, 2vh, 24px) clamp(8px, 2vw, 24px);
+    overflow-x: hidden;
+}
+
+.gameContainer {
+    width: min(100%, 1000px);
+    height: auto;
+    min-height: 0;
+    padding: clamp(12px, 2.5vh, 25px) clamp(12px, 3vw, 35px);
+    gap: clamp(8px, 1.5vh, 15px);
+}
+
+.titleSection h1 {
+    font-size: clamp(1.7rem, 4.5vw, 3.5rem);
+    gap: clamp(4px, 0.8vw, 10px);
+}
+
+.subtitle {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+}
+
+.tagline {
+    font-size: clamp(0.9rem, 1.8vw, 1.3rem);
+}
+
+.gameSection {
+    gap: clamp(6px, 4vw, 60px);
+    margin: clamp(5px, 1.5vh, 15px) 0;
+}
+
+.playerCard {
+    width: clamp(100px, 15vw, 170px);
+    height: clamp(155px, 27vh, 250px);
+    padding: clamp(10px, 1.8vh, 18px) 10px;
+}
+
+.cardLabel,
+.cardName {
+    font-size: clamp(0.95rem, 1.8vw, 1.5rem);
+}
+
+.card-icon {
+    width: clamp(65px, 8vw, 90px);
+    height: clamp(65px, 8vw, 90px);
+}
+
+.cardPlaceholder,
+.choiceEmoji {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.vsBadge {
+    width: clamp(65px, 12vw, 145px);
+    height: clamp(60px, 12vh, 115px);
+}
+
+.vsBadge span {
+    font-size: clamp(2rem, 4vw, 3.6rem);
+}
+
+.playButton {
+    margin-top: clamp(5px, 1vh, 20px);
+    padding: clamp(6px, 1vh, 10px) clamp(10px, 1.5vw, 20px);
+    font-size: clamp(0.95rem, 1.6vw, 1.3rem);
+}
+
+.moveSection {
+    gap: clamp(6px, 1.5vh, 12px);
+}
+
+.sectionHeading {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+
+.moveOptions {
+    gap: clamp(10px, 2vw, 22px);
+}
+
+.moveButton {
+    width: clamp(76px, 10vh, 112px);
+    height: clamp(76px, 10vh, 112px);
+}
+
+.moveIcon {
+    font-size: clamp(2rem, 4vh, 3rem);
+}
+
+.moveLabel {
+    font-size: clamp(0.85rem, 1.5vw, 1.15rem);
+}
+
+.gameFooter {
+    width: 100%;
+    gap: clamp(3px, 0.8vh, 8px);
+}
+
+.sessionStats {
+    width: 100%;
+    max-width: 650px;
+    gap: clamp(8px, 1.5vw, 18px);
+    margin-top: clamp(4px, 1vh, 12px);
+}
+
+.statCard {
+    min-height: clamp(75px, 12vh, 115px);
+    padding: clamp(8px, 1.5vw, 15px);
+    gap: clamp(6px, 1.5vw, 20px);
+}
+
+.statIcon {
+    font-size: clamp(1.8rem, 4vw, 3.2rem);
+}
+
+.statLabel {
+    font-size: clamp(0.85rem, 1.8vw, 1.4rem);
+}
+
+.statValue {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+@media (max-height: 800px) and (min-width: 701px) {
+
+    .gameContainer {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        gap: 6px;
+    }
+
+    .playerCard {
+        height: clamp(150px, 25vh, 200px);
+    }
+
+    .gameSection {
+        margin: 4px 0;
+    }
+
+    .moveButton {
+        width: clamp(76px, 11vh, 90px);
+        height: clamp(76px, 11vh, 90px);
+    }
+
+    .sessionStats {
+        margin-top: 3px;
+    }
+
+    .statCard {
+        min-height: 72px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .gameContainer {
+        width: 100%;
+        padding: 18px 12px;
+    }
+
+    .gameSection {
+        gap: clamp(5px, 2vw, 15px);
+    }
+
+    .playerCard {
+        width: clamp(100px, 20vw, 140px);
+        height: clamp(165px, 25vh, 215px);
+    }
+
+    .vsBadge {
+        width: clamp(65px, 15vw, 105px);
+        height: clamp(55px, 12vh, 85px);
+    }
+
+    .moveButton {
+        width: clamp(75px, 13vw, 95px);
+        height: clamp(75px, 13vw, 95px);
+    }
+
+    .sessionStats {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 8px;
+    }
+
+    .gameContainer {
+        padding: 16px 9px;
+        border-radius: 13px;
+    }
+
+    .titleSection h1 {
+        font-size: clamp(1.55rem, 6.5vw, 2.3rem);
+        gap: 4px;
+    }
+
+    .gameSection {
+        gap: 4px;
+    }
+
+    .playerCard {
+        width: clamp(96px, 27vw, 130px);
+        height: clamp(155px, 24vh, 185px);
+        padding: 10px 5px;
+    }
+
+    .cardLabel,
+    .cardName {
+        font-size: clamp(0.9rem, 3.5vw, 1rem);
+    }
+
+    .card-icon {
+        width: clamp(60px, 17vw, 75px);
+        height: clamp(60px, 17vw, 75px);
+    }
+
+    .vs {
+        gap: 5px;
+    }
+
+    .vsBadge {
+        width: clamp(58px, 16vw, 75px);
+        height: clamp(52px, 14vw, 65px);
+    }
+
+    .vsBadge span {
+        font-size: clamp(1.7rem, 7vw, 2.2rem);
+    }
+
+    .playButton {
+        padding: 6px 8px;
+        font-size: 0.9rem;
+        margin-top: 3px;
+    }
+
+    .moveOptions {
+        gap: clamp(8px, 3vw, 12px);
+    }
+
+    .moveButton {
+        width: clamp(68px, 20vw, 90px);
+        height: clamp(68px, 20vw, 90px);
+        border-width: 4px;
+    }
+
+    .moveIcon {
+        font-size: clamp(1.8rem, 7vw, 2.3rem);
+    }
+
+    .moveLabel {
+        font-size: clamp(0.75rem, 3vw, 0.95rem);
+    }
+
+    .sessionStats {
+        gap: 7px;
+    }
+
+    .statCard {
+        min-width: 0;
+        padding: 9px 5px;
+        min-height: 75px;
+        border-radius: 16px;
+        border-width: 3px;
+        gap: 5px;
+    }
+
+    .statIcon {
+        font-size: clamp(1.5rem, 7vw, 2rem);
+    }
+
+    .statLabel {
+        font-size: clamp(0.7rem, 3vw, 0.9rem);
+        white-space: normal;
+        text-align: center;
+    }
+
+    .statValue {
+        font-size: clamp(1.4rem, 6vw, 1.8rem);
+    }
+}
+
+@media (max-width: 340px) {
+
+    .titleSection h1 {
+        font-size: 1.45rem;
+    }
+
+    .playerCard {
+        width: 92px;
+    }
+
+    .vsBadge {
+        width: 52px;
+        height: 48px;
+    }
+
+    .vsBadge span {
+        font-size: 1.6rem;
+    }
+
+    .statIcon {
+        font-size: 1.35rem;
+    }
+
+    .statLabel {
+        font-size: 0.65rem;
+    }
+}
+
+.scoreBoard {
+    margin-top: 0.5rem;
+}

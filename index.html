@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rock Paper Scissors | Showdown</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Bangers&family=Fredoka:wght@400;500;600;700&family=Sour+Gummy:wght@400;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="assets/logo.png">
+
+</head>
+
+<body>
+
+    <div class="gameContainer">
+
+        <!-- HEADER -->
+        <header class="headerSection">
+
+            <div class="titleSection">
+                <h1>
+                    <span class="title1">ROCK</span>
+                    <span class="title2">PAPER</span>
+                    <span class="title3">SCISSORS</span>
+                </h1>
+            </div>
+
+            <p class="subtitle">SHOWDOWN</p>
+            <p class="tagline">How far can you score?</p>
+
+        </header>
+
+
+        <!-- MAIN GAME SECTION -->
+        <main>
+
+            <section class="gameSection">
+
+                <!-- PLAYER CARD -->
+                <div class="player1 playerCard">
+
+                    <p class="cardLabel">PLAYER</p>
+
+                    <div class="card-icon" id="playerCardIcon">
+                        <span class="cardPlaceholder" id="playerPlaceholder">?</span>
+                        <span class="choiceEmoji" id="playerChoiceEmoji" hidden></span>
+                    </div>
+
+                    <p class="cardName">YOU</p>
+
+                </div>
+
+
+                <!-- VS SECTION -->
+                <div class="vs">
+
+                    <div class="vsBadge">
+                        <span>VS</span>
+                    </div>
+
+                    <button type="button" class="playButton" id="gameToggleButton" aria-pressed="false">
+                        RESET!
+                    </button>
+
+                </div>
+
+
+                <!-- OPPONENT CARD -->
+                <div class="player2 playerCard">
+
+                    <p class="cardLabel">OPPONENT</p>
+
+                    <div class="card-icon" id="cpuCardIcon">
+                        <span class="cardPlaceholder" id="cpuPlaceholder">?</span>
+                        <span class="choiceEmoji" id="cpuChoiceEmoji" hidden></span>
+                    </div>
+
+                    <p class="cardName">CPU</p>
+
+                </div>
+
+            </section>
+
+
+            <!-- MOVE SELECTION -->
+            <section class="moveSection">
+                <h2 class="sectionHeading">MAKE YOUR MOVE</h2>
+
+                <div class="moveOptions">
+
+                    <!-- ROCK -->
+                    <button class="moveButton" id="rockButton" type="button" aria-label="Choose Rock">
+
+                        <span class="moveIcon">✊</span>
+                        <span class="moveLabel">ROCK</span>
+
+                    </button>
+
+
+                    <!-- PAPER -->
+                    <button class="moveButton" id="paperButton" type="button" aria-label="Choose Paper">
+
+                        <span class="moveIcon">✋</span>
+                        <span class="moveLabel">PAPER</span>
+
+                    </button>
+
+
+                    <!-- SCISSORS -->
+                    <button class="moveButton" id="scissorsButton" type="button" aria-label="Choose Scissors">
+
+                        <span class="moveIcon">✌️</span>
+                        <span class="moveLabel" id="scissor">SCISSORS</span>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- FOOTER / SCOREBOARD -->
+
+        <footer class="gameFooter">
+
+            <div class="scoreBoard">
+                <span class="scoreLabel">SCORE</span>
+                <span class="playerScore">0</span>
+                <span class="scoreDivider">-</span>
+                <span class="cpuScore">0</span>
+            </div>
+
+            <p class="gameMessage">
+                Choose your move to start!
+            </p>
+
+            <div class="sessionStats">
+
+                <div class="statCard roundNo">
+                    <span class="statIcon">📅</span>
+
+                    <div class="statInfo">
+                        <span class="statLabel">ROUNDS PLAYED</span>
+                        <span class="statValue" id="roundNoValue">0</span>
+                    </div>
+                </div>
+
+                <div class="statCard highestScore">
+                    <span class="statIcon">🏆</span>
+
+                    <div class="statInfo">
+                        <span class="statLabel">HIGHEST SCORE</span>
+                        <span class="statValue" id="highestScoreValue">0</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </footer>
+
+
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
