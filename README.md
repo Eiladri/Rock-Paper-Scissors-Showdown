@@ -4,6 +4,10 @@
 
 Rock Paper Scissors — Showdown is a browser-based game built with HTML, CSS and vanilla JavaScript to practice JavaScript concepts. Players choose a move against the computer and track their scores across rounds.
 
+##Live Link
+
+https://eiladri.github.io/Rock-Paper-Scissors-Showdown/
+
 ## Features
 
 - Player-versus-computer gameplay with a randomly selected computer move.
